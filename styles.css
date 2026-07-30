@@ -1,0 +1,137 @@
+:root {
+  --navy: #00152f;
+  --navy-deep: #001026;
+  --navy-ink: #07162f;
+  --gold: #dba358;
+  --gold-light: #efb76b;
+  --paper: #f8f7f4;
+  --white: #fff;
+  --muted: #60646a;
+  --line: #d4d4d2;
+  --display: "Cormorant Garamond", Georgia, serif;
+  --sans: "Manrope", Arial, sans-serif;
+  --page-width: 1288px;
+  --page-gutter: clamp(24px, 5.2vw, 76px);
+  --focus: #f4b966;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--navy-ink); background: var(--paper); font-family: var(--sans); }
+img { display: block; max-width: 100%; }
+.page-width { width: min(100%, var(--page-width)); margin-inline: auto; padding-inline: var(--page-gutter); }
+
+.hero {
+  min-height: 820px;
+  color: var(--white);
+  background-image: linear-gradient(90deg, rgba(0, 14, 34, .97) 0%, rgba(0, 17, 41, .9) 37%, rgba(0, 18, 42, .46) 67%, rgba(0, 14, 32, .28) 100%), url("assets/lexia-house.png");
+  background-position: center;
+  background-size: cover;
+}
+.site-header { height: 120px; display: flex; align-items: center; }
+.brand { display: inline-block; border-radius: 2px; }
+.brand img { width: 230px; height: auto; }
+.brand:focus-visible { outline: 3px solid var(--focus); outline-offset: 7px; }
+.hero-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(440px, 510px); align-items: center; gap: clamp(52px, 8vw, 116px); padding-top: 0; padding-bottom: 34px; }
+.hero-copy { padding-top: 18px; }
+h1 { margin: 0; font: 500 clamp(59px, 5.25vw, 77px)/.98 var(--display); letter-spacing: -.025em; }
+h1 span { color: var(--gold-light); }
+.gold-rule { display: block; width: 57px; height: 3px; margin: 34px 0 37px; background: var(--gold-light); }
+.hero-intro { margin: 0; font-size: 17px; line-height: 1.8; letter-spacing: .005em; }
+.services { display: flex; flex-wrap: wrap; gap: 15px 23px; max-width: 570px; padding: 0; margin: 52px 0 0; list-style: none; }
+.services li { display: flex; align-items: center; color: #f2f3f5; font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.services li:not(:last-child)::after { content: ""; width: 4px; height: 4px; margin-left: 23px; border-radius: 50%; background: var(--gold-light); }
+
+.enquiry-card { color: var(--navy-ink); padding: 35px 39px 33px; border: 1px solid rgba(255,255,255,.9); border-radius: 8px; background: rgba(252,251,249,.97); box-shadow: 0 3px 12px rgba(0,0,0,.2); }
+.enquiry-card h2 { margin: 0 0 24px; font: 500 39px/1.1 var(--display); letter-spacing: -.02em; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+.field { min-width: 0; }
+.field-wide { grid-column: 1 / -1; }
+label { display: block; margin-bottom: 8px; font-size: 11px; font-weight: 600; }
+input, select, textarea { width: 100%; min-height: 42px; border: 1px solid #d2d2d0; border-radius: 2px; color: var(--navy-ink); background: #fff; font: 14px var(--sans); transition: border-color .15s, box-shadow .15s; }
+input, select { padding: 0 13px; }
+select { appearance: none; padding-right: 40px; background-image: linear-gradient(45deg, transparent 50%, var(--navy-ink) 50%), linear-gradient(135deg, var(--navy-ink) 50%, transparent 50%); background-position: calc(100% - 17px) 18px, calc(100% - 12px) 18px; background-size: 5px 5px; background-repeat: no-repeat; }
+textarea { min-height: 90px; padding: 11px 13px; resize: vertical; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: #9d7138; box-shadow: 0 0 0 3px rgba(219,163,88,.25); }
+.error { display: none; min-height: 15px; margin-top: 5px; color: #a02828; font-size: 10px; line-height: 1.35; }
+.field.has-error .error { display: block; }
+.field.has-error input, .field.has-error select, .field.has-error textarea { border-color: #a02828; }
+button { width: 100%; min-height: 48px; margin-top: 23px; border: 1px solid var(--navy-deep); border-radius: 2px; color: var(--gold-light); background: var(--navy-deep); font: 600 12px var(--sans); letter-spacing: .16em; text-transform: uppercase; cursor: pointer; transition: color .2s, background .2s, transform .2s; }
+button:hover { color: var(--navy-deep); background: var(--gold-light); }
+button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+button:active { transform: translateY(1px); }
+.form-notes { margin-top: 22px; }
+.form-notes p { display: flex; align-items: center; gap: 12px; margin: 11px 0 0; color: #4f5359; font-size: 10px; line-height: 1.5; }
+.form-notes svg { flex: 0 0 19px; width: 19px; fill: none; stroke: #72767b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
+.success-message { min-height: 510px; display: grid; align-content: center; justify-items: center; text-align: center; }
+.success-icon { display: grid; place-items: center; width: 64px; height: 64px; margin-bottom: 24px; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); font-size: 30px; }
+.success-message h2 { margin-bottom: 14px; }
+.success-message p { max-width: 350px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+
+.trust-strip { background: #fbfaf8; }
+.trust-grid { min-height: 164px; display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; }
+.trust-item { min-height: 72px; display: flex; align-items: center; justify-content: center; gap: 25px; padding: 0 35px; }
+.trust-item + .trust-item { border-left: 1px solid #d5d2cd; }
+.trust-icon { flex: 0 0 72px; display: grid; place-items: center; width: 72px; height: 72px; border: 1px solid var(--gold); border-radius: 50%; }
+.trust-icon svg { width: 42px; height: 42px; fill: none; stroke: var(--gold); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+.trust-item p { min-width: 150px; margin: 0; font-size: 14px; line-height: 1.55; }
+.compliance-footer { min-height: 99px; display: grid; place-items: center; padding: 23px var(--page-gutter); color: #dedfe3; background: var(--navy-deep); text-align: center; }
+.compliance-footer p { margin: 0; font-size: 10px; line-height: 1.65; }
+
+@media (max-width: 1100px) {
+  .hero { min-height: 790px; }
+  .hero-layout { grid-template-columns: minmax(0, 1fr) minmax(400px, 470px); gap: 38px; }
+  .enquiry-card { padding: 30px; }
+  h1 { font-size: clamp(52px, 5.5vw, 64px); }
+  .services { gap: 13px 16px; }
+  .services li:not(:last-child)::after { margin-left: 16px; }
+  .trust-item { gap: 16px; padding: 0 18px; }
+  .trust-icon { flex-basis: 62px; width: 62px; height: 62px; }
+}
+
+@media (max-width: 800px) {
+  :root { --page-gutter: 28px; }
+  .hero { min-height: auto; background-image: linear-gradient(rgba(0,16,38,.93), rgba(0,16,38,.97)), url("assets/lexia-house.png"); background-position: 63% center; }
+  .site-header { height: 105px; }
+  .brand img { width: 200px; }
+  .hero-layout { display: block; padding-bottom: 50px; }
+  .hero-copy { padding: 32px 0 48px; }
+  h1 { font-size: clamp(52px, 11vw, 72px); }
+  .gold-rule { margin: 27px 0 28px; }
+  .hero-intro { font-size: 16px; }
+  .services { margin-top: 31px; }
+  .enquiry-card { max-width: 620px; margin: 0 auto; padding: 34px; }
+  .trust-grid { grid-template-columns: 1fr; padding-block: 15px; }
+  .trust-item { justify-content: flex-start; min-height: 104px; padding: 16px max(8vw, 22px); }
+  .trust-item + .trust-item { border-top: 1px solid #dedbd6; border-left: 0; }
+}
+
+@media (max-width: 480px) {
+  :root { --page-gutter: 20px; }
+  .site-header { height: 90px; }
+  .brand img { width: 174px; }
+  .hero-copy { padding: 26px 0 40px; }
+  h1 { font-size: 50px; }
+  .desktop-break { display: none; }
+  .hero-intro { font-size: 15px; line-height: 1.65; }
+  .services { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 12px; }
+  .services li { font-size: 10px; white-space: normal; }
+  .services li::after { display: none; }
+  .enquiry-card { padding: 28px 20px 25px; border-radius: 6px; }
+  .enquiry-card h2 { font-size: 34px; }
+  .form-grid { grid-template-columns: 1fr; gap: 16px; }
+  .field-wide { grid-column: auto; }
+  input, select { min-height: 46px; }
+  select { background-position: calc(100% - 17px) 20px, calc(100% - 12px) 20px; }
+  button { min-height: 52px; }
+  .form-notes p { align-items: flex-start; }
+  .success-message { min-height: 420px; }
+  .trust-item { padding-inline: 10px; }
+  .trust-item p { min-width: 0; font-size: 13px; }
+  .compliance-footer p { font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
