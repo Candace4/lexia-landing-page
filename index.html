@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tailored mortgage and finance solutions for property, investment and business from Lexia Finance Group.">
+    <title>Lexia Finance Group | Smart finance. Clear direction.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <header class="site-header page-width">
+          <a class="brand" href="#main-content" aria-label="Lexia Finance Group home">
+            <img src="assets/lexia-logo.svg" alt="Lexia Finance Group" width="214" height="60">
+          </a>
+        </header>
+
+        <div class="hero-layout page-width" id="main-content">
+          <div class="hero-copy">
+            <h1 id="hero-title">Smart finance.<br><span>Clear direction.</span></h1>
+            <span class="gold-rule" aria-hidden="true"></span>
+            <p class="hero-intro">Tailored mortgage and finance solutions for<br class="desktop-break"> property, investment and business.</p>
+            <ul class="services" aria-label="Finance services">
+              <li>Home loans</li>
+              <li>Refinancing</li>
+              <li>Investment loans</li>
+              <li>Construction finance</li>
+              <li>Business lending</li>
+            </ul>
+          </div>
+
+          <section class="enquiry-card" aria-labelledby="form-title">
+            <div id="form-content">
+              <h2 id="form-title">Start your enquiry</h2>
+              <form id="enquiry-form" novalidate>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="first-name">First name</label>
+                    <input id="first-name" name="firstName" type="text" autocomplete="given-name" required>
+                    <span class="error" id="first-name-error"></span>
+                  </div>
+                  <div class="field">
+                    <label for="last-name">Last name</label>
+                    <input id="last-name" name="lastName" type="text" autocomplete="family-name" required>
+                    <span class="error" id="last-name-error"></span>
+                  </div>
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+                    <span class="error" id="email-error"></span>
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9+() .-]{8,20}">
+                    <span class="error" id="phone-error"></span>
+                  </div>
+                  <div class="field field-wide">
+                    <label for="service">What can we help you with?</label>
+                    <select id="service" name="service" required>
+                      <option value="" selected disabled>Please select</option>
+                      <option>Home loan</option>
+                      <option>Refinancing</option>
+                      <option>Investment loan</option>
+                      <option>Construction finance</option>
+                      <option>Asset finance</option>
+                      <option>Business lending</option>
+                      <option>Something else</option>
+                    </select>
+                    <span class="error" id="service-error"></span>
+                  </div>
+                  <div class="field field-wide">
+                    <label for="goal">Tell us briefly about your goal</label>
+                    <textarea id="goal" name="goal" rows="4" required minlength="10"></textarea>
+                    <span class="error" id="goal-error"></span>
+                  </div>
+                </div>
+                <button type="submit">Request a call back</button>
+                <div class="form-notes">
+                  <p><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>No obligation. We’ll usually be in touch within one business day.</p>
+                  <p><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6.5" y="10" width="11" height="10" rx="1"></rect><path d="M9 10V7a3 3 0 0 1 6 0v3M12 14v2"></path></svg>Please do not include sensitive identity documents or passwords.</p>
+                </div>
+                <!-- Connect the form to the approved CRM or secure form endpoint here. -->
+              </form>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Why choose Lexia">
+        <div class="trust-grid page-width">
+          <div class="trust-item">
+            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="m8 28 5-8 5 1 3-6 6 2 5-3 3 5 5 2-1 8 3 5-6 4-5-2-5 3-4-4-8 1-4-6 4-3Z"></path><path d="m15 29 3 2 4-4"></path></svg></span>
+            <p>Australian-based<br>finance specialists</p>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><circle cx="24" cy="16" r="5"></circle><path d="M15 36v-5a9 9 0 0 1 18 0v5M12 19a4 4 0 0 0 0 8M9 35v-3a6 6 0 0 1 4-5M36 19a4 4 0 0 1 0 8M39 35v-3a6 6 0 0 0-4-5"></path></svg></span>
+            <p>No-obligation<br>initial conversation</p>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 7c5 4 10 5 15 5v10c0 9-6 15-15 20-9-5-15-11-15-20V12c5 0 10-1 15-5Z"></path><path d="m17 24 5 5 9-10"></path></svg></span>
+            <p>Your information is<br>handled securely</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="compliance-footer">
+      <!-- COMPLIANCE WORDING: Replace with final approved legal wording when supplied. -->
+      <p>Lexia Finance Group Pty Ltd is a Credit Representative (Number 555555) of Finsure Finance and Insurance Pty Ltd<br>(Australian Credit Licence 387982). General information only. Credit subject to assessment, lender policy and eligibility criteria.</p>
+      <!-- END COMPLIANCE WORDING -->
+    </footer>
+  </body>
+</html>
