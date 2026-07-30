@@ -7,7 +7,7 @@
     <title>Lexia Finance Group | Smart finance. Clear direction.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
@@ -41,31 +41,32 @@
           <section class="enquiry-card" aria-labelledby="form-title">
             <div id="form-content">
               <h2 id="form-title">Start your enquiry</h2>
+              <p class="required-note">All fields are required.</p>
               <form id="enquiry-form" novalidate>
                 <div class="form-grid">
                   <div class="field">
-                    <label for="first-name">First name</label>
-                    <input id="first-name" name="firstName" type="text" autocomplete="given-name" required>
+                    <label for="first-name">First name <span class="required-marker" aria-hidden="true">*</span></label>
+                    <input id="first-name" name="firstName" type="text" autocomplete="given-name" required aria-required="true">
                     <span class="error" id="first-name-error"></span>
                   </div>
                   <div class="field">
-                    <label for="last-name">Last name</label>
-                    <input id="last-name" name="lastName" type="text" autocomplete="family-name" required>
+                    <label for="last-name">Last name <span class="required-marker" aria-hidden="true">*</span></label>
+                    <input id="last-name" name="lastName" type="text" autocomplete="family-name" required aria-required="true">
                     <span class="error" id="last-name-error"></span>
                   </div>
                   <div class="field">
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+                    <label for="email">Email <span class="required-marker" aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-required="true">
                     <span class="error" id="email-error"></span>
                   </div>
                   <div class="field">
-                    <label for="phone">Phone</label>
-                    <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9+() .-]{8,20}">
+                    <label for="phone">Phone <span class="required-marker" aria-hidden="true">*</span></label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-required="true" pattern="[0-9+() .-]{8,20}">
                     <span class="error" id="phone-error"></span>
                   </div>
                   <div class="field field-wide">
-                    <label for="service">What can we help you with?</label>
-                    <select id="service" name="service" required>
+                    <label for="service">What can we help you with? <span class="required-marker" aria-hidden="true">*</span></label>
+                    <select id="service" name="service" required aria-required="true">
                       <option value="" selected disabled>Please select</option>
                       <option>Home loan</option>
                       <option>Refinancing</option>
@@ -78,8 +79,8 @@
                     <span class="error" id="service-error"></span>
                   </div>
                   <div class="field field-wide">
-                    <label for="goal">Tell us briefly about your goal</label>
-                    <textarea id="goal" name="goal" rows="4" required minlength="10"></textarea>
+                    <label for="goal">Tell us briefly about your goal <span class="required-marker" aria-hidden="true">*</span></label>
+                    <textarea id="goal" name="goal" rows="4" required aria-required="true" minlength="10"></textarea>
                     <span class="error" id="goal-error"></span>
                   </div>
                 </div>
@@ -98,15 +99,15 @@
       <section class="trust-strip" aria-label="Why choose Lexia">
         <div class="trust-grid page-width">
           <div class="trust-item">
-            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="m8 28 5-8 5 1 3-6 6 2 5-3 3 5 5 2-1 8 3 5-6 4-5-2-5 3-4-4-8 1-4-6 4-3Z"></path><path d="m15 29 3 2 4-4"></path></svg></span>
+            <span class="trust-icon trust-icon-location"><svg aria-hidden="true" viewBox="0 0 28 28"><path d="M22 11.5c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"></path><circle cx="14" cy="11.5" r="2.5"></circle></svg><span aria-hidden="true">AU</span></span>
             <p>Australian-based<br>finance specialists</p>
           </div>
           <div class="trust-item">
-            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><circle cx="24" cy="16" r="5"></circle><path d="M15 36v-5a9 9 0 0 1 18 0v5M12 19a4 4 0 0 0 0 8M9 35v-3a6 6 0 0 1 4-5M36 19a4 4 0 0 1 0 8M39 35v-3a6 6 0 0 0-4-5"></path></svg></span>
+            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 28 28"><path d="M24 13a9 9 0 0 1-9 9H9l-5 3 1.5-5A9 9 0 1 1 24 13Z"></path><path d="M10 12h8M10 16h5"></path></svg></span>
             <p>No-obligation<br>initial conversation</p>
           </div>
           <div class="trust-item">
-            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 7c5 4 10 5 15 5v10c0 9-6 15-15 20-9-5-15-11-15-20V12c5 0 10-1 15-5Z"></path><path d="m17 24 5 5 9-10"></path></svg></span>
+            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 28 28"><path d="M14 3c3 2.5 6 3.5 10 3.5v6c0 6-3.8 10-10 13-6.2-3-10-7-10-13v-6C8 6.5 11 5.5 14 3Z"></path><path d="m9.5 14 3 3 6-6"></path></svg></span>
             <p>Your information is<br>handled securely</p>
           </div>
         </div>
