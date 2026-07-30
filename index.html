@@ -41,7 +41,8 @@
           <section class="enquiry-card" aria-labelledby="form-title">
             <div id="form-content">
               <h2 id="form-title">Start your enquiry</h2>
-              <p class="required-note">All fields are required.</p>
+              <p class="form-intro">Tell us a little about what you’re looking to achieve and we’ll be in touch.</p>
+              <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
               <form id="enquiry-form" novalidate>
                 <div class="form-grid">
                   <div class="field">
@@ -96,19 +97,25 @@
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Why choose Lexia">
-        <div class="trust-grid page-width">
-          <div class="trust-item">
-            <span class="trust-icon trust-icon-location"><svg aria-hidden="true" viewBox="0 0 28 28"><path d="M22 11.5c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"></path><circle cx="14" cy="11.5" r="2.5"></circle></svg><span aria-hidden="true">AU</span></span>
-            <p>Australian-based<br>finance specialists</p>
+      <section class="trust-section" aria-labelledby="trust-title">
+        <div class="trust-content page-width">
+          <div class="trust-intro">
+            <p class="trust-eyebrow">Why Lexia</p>
+            <h2 id="trust-title">Clear guidance. Personal service. Finance shaped around your goals.</h2>
           </div>
-          <div class="trust-item">
-            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 28 28"><path d="M24 13a9 9 0 0 1-9 9H9l-5 3 1.5-5A9 9 0 1 1 24 13Z"></path><path d="M10 12h8M10 16h5"></path></svg></span>
-            <p>No-obligation<br>initial conversation</p>
-          </div>
-          <div class="trust-item">
-            <span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 28 28"><path d="M14 3c3 2.5 6 3.5 10 3.5v6c0 6-3.8 10-10 13-6.2-3-10-7-10-13v-6C8 6.5 11 5.5 14 3Z"></path><path d="m9.5 14 3 3 6-6"></path></svg></span>
-            <p>Your information is<br>handled securely</p>
+          <div class="trust-grid">
+            <div class="trust-item">
+              <span class="trust-icon trust-icon-australia" aria-hidden="true"></span>
+              <p>Australian-based finance specialists</p>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon trust-icon-people" aria-hidden="true"></span>
+              <p>No-obligation initial conversation</p>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon trust-icon-safe" aria-hidden="true"></span>
+              <p>Your information is handled securely</p>
+            </div>
           </div>
         </div>
       </section>
