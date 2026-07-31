@@ -16,7 +16,7 @@ function validateField(field) {
 
   wrapper.classList.toggle("has-error", !isValid);
   field.setAttribute("aria-invalid", String(!isValid));
-  field.setAttribute("aria-describedby", `${field.id}-error`);
+  field.setAttribute("aria-describedby", field.id === "goal" ? "goal-helper goal-error" : `${field.id}-error`);
   error.textContent = isValid ? "" : messages[field.id];
   return isValid;
 }
