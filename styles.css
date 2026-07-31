@@ -42,11 +42,15 @@ label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 600; l
 .required-marker { margin-left: 3px; font-weight: 600; }
 input, select, textarea { width: 100%; height: 50px; border: 1px solid #8D99A6; border-radius: 3px; color: var(--ink); background-color: #FCFCFB; box-shadow: none; font: 400 15px var(--sans); transition: border-color .15s, background-color .15s, box-shadow .15s; }
 input, select { padding-inline: 15px; }
+select, select option { font-family: "Inter", Arial, sans-serif; font-size: 15px; font-weight: 400; font-style: normal; letter-spacing: 0; }
 select { appearance: none; padding-right: 42px; background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 19px) 22px, calc(100% - 14px) 22px; background-size: 5px 5px; background-repeat: no-repeat; }
+select:invalid { color: var(--muted); }
+select:valid { color: var(--ink); }
+select option { color: var(--ink); background: var(--white); }
 textarea { min-height: 110px; height: auto; padding: 14px 15px; resize: vertical; }
 input:hover, select:hover, textarea:hover { border-color: var(--navy-700); background-color: var(--white); }
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold-500); background-color: var(--white); box-shadow: 0 0 0 3px rgba(215,163,90,.22); }
-.field-helper { display: flex; align-items: flex-start; gap: 8px; margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.field-helper { display: flex; align-items: flex-start; gap: 8px; margin: 8px 0 0; color: var(--muted); font: 400 13px/1.5 var(--sans); }
 .field-helper svg { flex: 0 0 16px; width: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
 .error { display: none; min-height: 19px; margin-top: 6px; color: var(--error); font-size: 12px; line-height: 1.4; }
 .field.has-error .error { display: block; }
@@ -55,24 +59,24 @@ button { width: 100%; height: 54px; margin-top: 32px; border: 0; border-radius: 
 button:hover { background: var(--navy-900); }
 button:focus-visible { outline: 3px solid var(--gold-500); outline-offset: 3px; }
 .form-notes { margin-top: 18px; }
-.form-notes p { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.form-notes p { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--muted); font: 400 13px/1.5 var(--sans); }
 .form-notes p + p { margin-top: 14px; }
 .form-notes svg { flex: 0 0 19px; width: 19px; fill: none; stroke: var(--muted); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
 .success-message { min-height: 550px; display: grid; align-content: center; justify-items: center; text-align: center; }
 .success-icon { display: grid; place-items: center; width: 64px; height: 64px; margin-bottom: 24px; border: 1px solid var(--gold-500); border-radius: 50%; color: var(--gold-500); font-size: 30px; }
 .success-message h2 { margin-bottom: 14px; }
 .success-message p { max-width: 350px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
-.trust-section { padding-block: 58px 56px; border-top: 1px solid rgba(0,21,47,.1); color: var(--navy-950); background: var(--warm-white); }
-.trust-intro { max-width: 620px; margin: 0 auto 34px; text-align: center; }
-.trust-intro::before { content: ""; display: block; width: 32px; height: 2px; margin: 0 auto 22px; background: var(--gold-500); }
+.trust-section { padding-block: 62px 60px; border-top: 1px solid rgba(0,21,47,.1); color: var(--navy-950); background: var(--warm-white); }
+.trust-intro { max-width: 720px; margin: 0 auto 42px; text-align: center; }
+.trust-intro::before { content: none; }
 .trust-intro h2 { margin: 0; font: 500 30px/1.35 var(--sans); }
-.trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-.trust-item { min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 46px; text-align: center; }
-.trust-icon { display: block; flex: 0 0 84px; width: 84px; height: 84px; background-color: var(--gold-500); mask-repeat: no-repeat; mask-position: center; mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center; -webkit-mask-size: contain; }
+.trust-grid { width: min(100%, 1120px); margin-inline: auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+.trust-item { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 20px; padding-inline: 32px; text-align: center; }
+.trust-icon { display: block; flex: 0 0 100px; width: 100px; height: 100px; background-color: var(--gold-500); mask-repeat: no-repeat; mask-position: center; mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center; -webkit-mask-size: contain; }
 .trust-icon-australia { mask-image: url("assets/icon-australia.svg"); -webkit-mask-image: url("assets/icon-australia.svg"); }
 .trust-icon-people { mask-image: url("assets/icon-people.svg"); -webkit-mask-image: url("assets/icon-people.svg"); }
 .trust-icon-safe { mask-image: url("assets/icon-safe.svg"); -webkit-mask-image: url("assets/icon-safe.svg"); }
-.trust-item p { max-width: 250px; margin: 0; font-size: 15px; font-weight: 500; line-height: 1.5; }
+.trust-item p { max-width: 260px; margin: 0; font-size: 16px; font-weight: 500; line-height: 1.5; }
 .compliance-footer { display: grid; place-items: center; padding: 46px var(--page-gutter); border-top: 1px solid rgba(215,163,90,.55); color: var(--white); background: var(--navy-950); text-align: center; }
 .compliance-footer p { width: min(100%, 900px); margin-inline: auto; font-size: 13px; line-height: 1.6; }
 @media (max-width: 1100px) {
@@ -80,8 +84,12 @@ button:focus-visible { outline: 3px solid var(--gold-500); outline-offset: 3px; 
   h1 { font-size: clamp(54px, 6vw, 66px); }
   .enquiry-card { padding: 44px 32px 40px; }
   .services { grid-template-columns: repeat(2, max-content); column-gap: 30px; }
-  .trust-item { gap: 24px; padding-inline: 28px; }
-  .trust-icon { flex-basis: 76px; width: 76px; height: 76px; }
+  .trust-intro h2 { font-size: 25px; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .trust-item { flex-direction: row; justify-content: flex-start; gap: 24px; padding: 26px 12px; text-align: left; }
+  .trust-item + .trust-item { border-top: 1px solid rgba(0,21,47,.12); }
+  .trust-icon { flex-basis: 84px; width: 84px; height: 84px; }
+  .trust-item p { max-width: none; }
 }
 @media (max-width: 800px) {
   :root { --page-gutter: 28px; }
@@ -93,15 +101,9 @@ button:focus-visible { outline: 3px solid var(--gold-500); outline-offset: 3px; 
   h1 { font-size: clamp(54px, 10vw, 72px); }
   .gold-rule { margin-top: 12px; margin-bottom: 24px; }
   .enquiry-card { width: 100%; max-width: 640px; margin: 0 auto; padding: 44px 32px 40px; }
-  .trust-section { padding-block: 58px 56px; }
-  .trust-intro { margin: 0 0 34px; text-align: left; }
-  .trust-intro::before { margin-left: 0; }
-  .trust-intro h2 { font-size: 24px; }
-  .trust-grid { grid-template-columns: 1fr; }
-  .trust-item { min-height: 0; flex-direction: row; justify-content: flex-start; gap: 24px; padding: 26px 12px; text-align: left; }
-  .trust-item + .trust-item { border-top: 1px solid rgba(0,21,47,.12); }
-  .trust-icon { flex-basis: 68px; width: 68px; height: 68px; }
-  .trust-item p { max-width: none; }
+  .trust-intro { margin-inline: 0; text-align: left; }
+  .trust-intro h2 { font-size: 22px; }
+  .trust-icon { flex-basis: 72px; width: 72px; height: 72px; }
 }
 @media (max-width: 599px) { .form-grid { grid-template-columns: 1fr; } .field-wide { grid-column: auto; } }
 @media (max-width: 480px) {
@@ -121,8 +123,6 @@ button:focus-visible { outline: 3px solid var(--gold-500); outline-offset: 3px; 
   .enquiry-card h2 { font-size: 27px; }
   .form-notes p { align-items: flex-start; }
   .success-message { min-height: 430px; }
-  .trust-section { padding-block: 52px 50px; }
-  .trust-intro h2 { font-size: 21px; }
   .trust-item { padding-inline: 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
