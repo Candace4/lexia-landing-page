@@ -81,14 +81,14 @@
                   </div>
                   <div class="field field-wide">
                     <label for="goal">Tell us briefly about your goal <span class="required-marker" aria-hidden="true">*</span></label>
-                    <textarea id="goal" name="goal" rows="4" required aria-required="true" minlength="10"></textarea>
+                    <textarea id="goal" name="goal" rows="4" required aria-required="true" minlength="10" aria-describedby="goal-helper goal-error"></textarea>
+                    <p class="field-helper" id="goal-helper"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6.5" y="10" width="11" height="10" rx="1"></rect><path d="M9 10V7a3 3 0 0 1 6 0v3M12 14v2"></path></svg>Please do not include sensitive identity documents or passwords.</p>
                     <span class="error" id="goal-error"></span>
                   </div>
                 </div>
                 <button type="submit">Request a call back</button>
                 <div class="form-notes">
                   <p><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>No obligation. We’ll usually be in touch within one business day.</p>
-                  <p><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6.5" y="10" width="11" height="10" rx="1"></rect><path d="M9 10V7a3 3 0 0 1 6 0v3M12 14v2"></path></svg>Please do not include sensitive identity documents or passwords.</p>
                 </div>
                 <!-- Connect the form to the approved CRM or secure form endpoint here. -->
               </form>
@@ -100,8 +100,8 @@
       <section class="trust-section" aria-labelledby="trust-title">
         <div class="trust-content page-width">
           <div class="trust-intro">
-            <p class="trust-eyebrow">Why Lexia</p>
-            <h2 id="trust-title">Clear guidance. Personal service. Finance shaped around your goals.</h2>
+            <span class="trust-rule" aria-hidden="true"></span>
+            <h2 id="trust-title">Clear guidance. Personal service.<br>Finance shaped around your goals.</h2>
           </div>
           <div class="trust-grid">
             <div class="trust-item">
