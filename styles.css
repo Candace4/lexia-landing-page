@@ -21,6 +21,7 @@ img { display: block; max-width: 100%; }
 .hero-layout { min-height: 856px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(440px, 520px); align-items: start; gap: clamp(64px, 8vw, 116px); padding-top: 62px; padding-bottom: 88px; }
 .hero-copy { max-width: 650px; }
 h1 { margin: 0; font-family: var(--display); font-size: 72px; font-weight: 500; line-height: .98; letter-spacing: -.025em; }
+#hero-title { font-variant-ligatures: common-ligatures; font-feature-settings: "liga" 1; }
 h1 span { color: var(--gold-500); }
 .gold-rule { display: block; width: 44px; height: 2px; margin: 12px 0 28px; background: var(--gold-500); }
 .hero-intro { max-width: 420px; margin: 0; color: var(--white); font-size: 19px; line-height: 1.6; }
