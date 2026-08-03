@@ -2,6 +2,9 @@ const menuButton = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector("#mobile-menu");
 const form = document.querySelector("#enquiry-form");
 const formStatus = document.querySelector("#form-status");
+document.querySelectorAll("[data-current-year]").forEach((year) => {
+  year.textContent = new Date().getFullYear();
+});
 function closeMenu() {
   menuButton.setAttribute("aria-expanded", "false");
   menuButton.setAttribute("aria-label", "Open navigation menu");
