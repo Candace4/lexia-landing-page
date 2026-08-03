@@ -11,126 +11,121 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
   <body>
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <header class="site-header page-width">
-          <a class="brand" href="#main-content" aria-label="Lexia Finance Group home">
-            <img src="assets/lexia-logo.svg" alt="Lexia Finance Group" width="214" height="60">
-          </a>
-          <p class="header-tagline">Tailored finance solutions</p>
-        </header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" id="home">
+      <div class="header-inner page-width">
+        <a class="brand" href="#home" aria-label="Lexia Finance Group home">
+          <img src="assets/lexia-logo.svg" alt="Lexia Finance Group" width="214" height="60">
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#home">Home</a><a href="#solutions">Solutions</a><a href="#approach">Our Approach</a><a href="#who-we-help">Who We Help</a>
+          <a class="nav-cta" href="#enquire">Enquire Now</a>
+        </nav>
+        <a class="mobile-cta" href="#enquire">Enquire</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
+        <a href="#home">Home</a><a href="#solutions">Solutions</a><a href="#approach">Our Approach</a><a href="#who-we-help">Who We Help</a><a href="#enquire">Enquire Now</a>
+      </nav>
+    </header>
 
-        <div class="hero-layout page-width" id="main-content">
-          <div class="hero-copy">
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="hero-copy-inner">
+            <p class="eyebrow">Tailored finance solutions</p>
             <h1 id="hero-title">Smart finance.<br><span>Clear direction.</span></h1>
             <span class="gold-rule" aria-hidden="true"></span>
             <p class="hero-intro">Expert mortgage and finance guidance for home buyers, investors and business owners.</p>
-            <h2 class="services-heading">Areas we can help with</h2>
-            <ul class="services" aria-label="Finance services">
-              <li>Home loans</li>
-              <li>Refinancing</li>
-              <li>Investment loans</li>
-              <li>Construction finance</li>
-              <li>Business lending</li>
-            </ul>
+            <a class="button button-gold" href="#enquire">Start an enquiry</a>
           </div>
-
-          <section class="enquiry-card" aria-labelledby="form-title">
-            <div id="form-content">
-              <div class="form-header">
-                <h2 id="form-title">Start your enquiry</h2>
-                <p class="form-intro">Tell us what you’re looking to achieve and we’ll be in touch.</p>
-              </div>
-              <form id="enquiry-form" novalidate>
-                <div class="form-grid">
-                  <div class="field">
-                    <label for="first-name">First name <span class="required-marker" aria-hidden="true">*</span></label>
-                    <input id="first-name" name="firstName" type="text" autocomplete="given-name" required aria-required="true">
-                    <span class="error" id="first-name-error"></span>
-                  </div>
-                  <div class="field">
-                    <label for="last-name">Last name <span class="required-marker" aria-hidden="true">*</span></label>
-                    <input id="last-name" name="lastName" type="text" autocomplete="family-name" required aria-required="true">
-                    <span class="error" id="last-name-error"></span>
-                  </div>
-                  <div class="field">
-                    <label for="email">Email <span class="required-marker" aria-hidden="true">*</span></label>
-                    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-required="true">
-                    <span class="error" id="email-error"></span>
-                  </div>
-                  <div class="field">
-                    <label for="phone">Phone <span class="required-marker" aria-hidden="true">*</span></label>
-                    <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-required="true" pattern="[0-9+() .-]{8,20}">
-                    <span class="error" id="phone-error"></span>
-                  </div>
-                  <div class="field field-wide">
-                    <label for="service">What can we help you with? <span class="required-marker" aria-hidden="true">*</span></label>
-                    <select id="service" name="service" required aria-required="true">
-                      <option value="" selected disabled>Please select</option>
-                      <option>Home loan</option>
-                      <option>Refinancing</option>
-                      <option>Investment loan</option>
-                      <option>Construction finance</option>
-                      <option>Asset finance</option>
-                      <option>Business lending</option>
-                      <option>Something else</option>
-                    </select>
-                    <span class="error" id="service-error"></span>
-                  </div>
-                  <div class="field field-wide">
-                    <label for="goal">Tell us about your goals <span class="required-marker" aria-hidden="true">*</span></label>
-                    <textarea id="goal" name="goal" rows="4" required aria-required="true" minlength="10" aria-describedby="goal-helper goal-error"></textarea>
-                    <p class="field-helper" id="goal-helper"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6.5" y="10" width="11" height="10" rx="1"></rect><path d="M9 10V7a3 3 0 0 1 6 0v3M12 14v2"></path></svg>Please do not include sensitive identity documents or passwords.</p>
-                    <span class="error" id="goal-error"></span>
-                  </div>
-                </div>
-                <button type="submit">Request a call back</button>
-                <div class="form-notes">
-                  <p><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>No obligation. We’ll usually be in touch within one business day.</p>
-                </div>
-                <!--
-                  LAUNCH REQUIREMENT:
-                  Connect this form to Web3Forms or the approved Lexia CRM before launch so completed enquiries are securely delivered to the nominated Lexia email address. The current preview form does not send or store submissions.
-                  Connect the form to the approved CRM or secure form endpoint here.
-                -->
-              </form>
-            </div>
-          </section>
+        </div>
+        <div class="hero-image">
+          <img src="assets/lexia-house.png" alt="Contemporary Australian home" width="1600" height="1067" fetchpriority="high">
         </div>
       </section>
 
-      <section class="trust-section" aria-labelledby="trust-title">
-        <div class="trust-content page-width">
-          <div class="trust-intro">
-            <h2 id="trust-title">The right finance starts with understanding your goals.</h2>
+      <section class="solutions section page-width" id="solutions" aria-labelledby="solutions-title">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-dark">Finance, considered</p>
+          <h2 id="solutions-title">Our Solutions</h2>
+          <p>Practical guidance across your property and business finance needs.</p>
+        </div>
+        <div class="solution-grid">
+          <article class="solution-item"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M6 23 24 8l18 15M11 21v19h26V21M19 40V28h10v12"/></svg><h3>Home Loans</h3></article>
+          <article class="solution-item"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M8 40h32M12 40V19h24v21M17 19V9h14v10M18 26h4m4 0h4m-12 7h4m4 0h4"/></svg><h3>Investment Loans</h3></article>
+          <article class="solution-item"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M38 18a16 16 0 0 0-27-5l-4 5m0 0h9m-9 0V9M10 30a16 16 0 0 0 27 5l4-5m0 0h-9m9 0v9"/></svg><h3>Refinancing</h3></article>
+          <article class="solution-item"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M7 41h34M11 41V25l13-11 13 11v16M18 41V30h12v11M9 19 24 6l15 13"/></svg><h3>Construction Finance</h3></article>
+          <article class="solution-item"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M7 31h34l-3-11H14L7 31Zm4 0v7m26-7v7M15 38h18M17 20l3-8h11l3 8"/></svg><h3>Asset Finance</h3></article>
+          <article class="solution-item"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M6 40h36M10 40V17h28v23M16 17V9h16v8M16 24h5m6 0h5m-16 7h5m6 0h5"/></svg><h3>Business Lending</h3></article>
+        </div>
+      </section>
+
+      <section class="approach section" id="approach" aria-labelledby="approach-title">
+        <div class="approach-inner page-width">
+          <div class="approach-lead">
+            <p class="eyebrow eyebrow-dark">Our Approach</p>
+            <h2 id="approach-title">The right finance starts with understanding your goals.</h2>
           </div>
-          <div class="trust-grid">
-            <div class="trust-item">
-              <span class="trust-icon trust-icon-australia" aria-hidden="true"></span>
-              <p>Australian finance specialists</p>
-            </div>
-            <div class="trust-item">
-              <span class="trust-icon trust-icon-people" aria-hidden="true"></span>
-              <p>No-obligation initial conversation</p>
-            </div>
-            <div class="trust-item">
-              <span class="trust-icon trust-icon-safe" aria-hidden="true"></span>
-              <p>Your information is handled securely</p>
-            </div>
+          <ol class="principles">
+            <li><span>01</span><div><h3>Listen first</h3><p>We begin with a clear picture of what you’re looking to achieve.</p></div></li>
+            <li><span>02</span><div><h3>Tailored guidance</h3><p>We help you navigate finance options with clarity and confidence.</p></div></li>
+            <li><span>03</span><div><h3>Support throughout</h3><p>Clear, considered guidance as your enquiry moves forward.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="audiences section page-width" id="who-we-help" aria-labelledby="audiences-title">
+        <div class="section-heading section-heading-row">
+          <div><p class="eyebrow eyebrow-dark">Who We Help</p><h2 id="audiences-title">Finance for your next move.</h2></div>
+          <p>Whether you’re buying a home, growing a property portfolio, refinancing or investing in your business, Lexia provides a clear path forward.</p>
+        </div>
+        <ul class="audience-list"><li>Home buyers</li><li>Property investors</li><li>Clients refinancing</li><li>Business owners</li></ul>
+      </section>
+
+      <section class="enquiry section" id="enquire" aria-labelledby="form-title">
+        <div class="enquiry-layout page-width">
+          <div class="enquiry-intro">
+            <p class="eyebrow">Start a conversation</p>
+            <h2 id="form-title">Let’s talk about your goals.</h2>
+            <p>Tell us what you’re looking to achieve and a Lexia finance specialist will be in touch.</p>
+          </div>
+          <div id="form-content">
+            <form id="enquiry-form" novalidate>
+              <div class="form-grid">
+                <div class="field floating-field"><input id="first-name" name="firstName" type="text" autocomplete="given-name" placeholder=" " required><label for="first-name">First name <span aria-hidden="true">*</span></label><span class="error" id="first-name-error"></span></div>
+                <div class="field floating-field"><input id="last-name" name="lastName" type="text" autocomplete="family-name" placeholder=" " required><label for="last-name">Last name <span aria-hidden="true">*</span></label><span class="error" id="last-name-error"></span></div>
+                <div class="field floating-field"><input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder=" " required><label for="email">Email <span aria-hidden="true">*</span></label><span class="error" id="email-error"></span></div>
+                <div class="field floating-field"><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+() .-]{8,20}" placeholder=" " required><label for="phone">Phone <span aria-hidden="true">*</span></label><span class="error" id="phone-error"></span></div>
+                <div class="field field-wide select-field"><select id="service" name="service" required><option value="" selected disabled></option><option>Home loan</option><option>Refinancing</option><option>Investment loan</option><option>Construction finance</option><option>Asset finance</option><option>Business lending</option><option>Something else</option></select><label for="service">What can we help you with? <span aria-hidden="true">*</span></label><span class="error" id="service-error"></span></div>
+                <div class="field field-wide floating-field"><textarea id="goal" name="goal" rows="4" minlength="10" placeholder=" " required aria-describedby="goal-note goal-error"></textarea><label for="goal">Tell us briefly about your goal <span aria-hidden="true">*</span></label><span class="error" id="goal-error"></span></div>
+              </div>
+              <p class="form-note" id="goal-note">Please do not submit sensitive documents, passwords or full identity details through this form.</p>
+              <div class="consent field">
+                <input id="privacy" name="privacy" type="checkbox" required>
+                <label for="privacy">I agree to Lexia Finance Group contacting me about my enquiry and acknowledge the Privacy Policy. <span aria-hidden="true">*</span></label>
+                <span class="error" id="privacy-error"></span>
+                <!-- TODO: Link “Privacy Policy” when the stakeholder supplies the approved privacy page URL. -->
+              </div>
+              <button class="button button-gold submit-button" type="submit">Submit enquiry</button>
+              <div class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+              <!-- TODO: Configure the approved CRM or secure form endpoint before launch. No submission endpoint or recipient is embedded in this public preview. -->
+            </form>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="compliance-footer">
-      <!-- COMPLIANCE WORDING: The credit representative number, licence information and legal copy must be replaced with final approved compliance wording before launch. -->
-      <p>Lexia Finance Group Pty Ltd is a Credit Representative (Number 555555) of Finsure Finance and Insurance Pty Ltd<br>(Australian Credit Licence 387982). General information only. Credit subject to assessment, lender policy and eligibility criteria.</p>
-      <!-- END COMPLIANCE WORDING -->
+      <div class="footer-inner page-width"><img src="assets/lexia-logo.svg" alt="Lexia Finance Group" width="180" height="51"><p>Lexia Finance Group Pty Ltd is a Credit Representative (Number 555555) of Finsure Finance and Insurance Pty Ltd<br>(Australian Credit Licence 387982). General information only. Credit subject to assessment, lender policy and eligibility criteria.</p></div>
+      <!-- TODO: Replace the representative number and legal copy with final stakeholder-approved compliance wording before launch. -->
     </footer>
   </body>
 </html>
