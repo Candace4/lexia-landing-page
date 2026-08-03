@@ -2,40 +2,6 @@ const menuButton = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector("#mobile-menu");
 const form = document.querySelector("#enquiry-form");
 const formStatus = document.querySelector("#form-status");
-const locationLinks = [...document.querySelectorAll('nav a[href="#home"], nav a[href="#solutions"], nav a[href="#approach"], nav a[href="#who-we-help"]')];
-const observedSections = ["home", "solutions", "approach", "who-we-help"]
-  .map((id) => document.getElementById(id));
-
-function setActiveLocation(id) {
-  locationLinks.forEach((link) => {
-    const isActive = link.hash === `#${id}`;
-    if (isActive) link.setAttribute("aria-current", "location");
-    else link.removeAttribute("aria-current");
-  });
-}
-
-locationLinks.forEach((link) => {
-  link.addEventListener("click", () => setActiveLocation(link.hash.slice(1)));
-});
-
-if ("IntersectionObserver" in window) {
-  const visibleSections = new Map();
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) visibleSections.set(entry.target.id, entry.intersectionRatio);
-      else visibleSections.delete(entry.target.id);
-    });
-
-    const active = [...visibleSections.entries()].sort((a, b) => b[1] - a[1])[0];
-    if (active) setActiveLocation(active[0]);
-  }, {
-    rootMargin: `-${getComputedStyle(document.documentElement).getPropertyValue("--header-height").trim()} 0px -48% 0px`,
-    threshold: [0, 0.15, 0.35, 0.6]
-  });
-
-  observedSections.forEach((section) => sectionObserver.observe(section));
-}
-
 function closeMenu() {
   menuButton.setAttribute("aria-expanded", "false");
   menuButton.setAttribute("aria-label", "Open navigation menu");
@@ -85,13 +51,13 @@ function validateField(field) {
   return isValid;
 }
 
-form.addEventListener("input", (event) => {
+form?.addEventListener("input", (event) => {
   if (event.target.matches("input, textarea")) validateField(event.target);
 });
-form.addEventListener("change", (event) => {
+form?.addEventListener("change", (event) => {
   if (event.target.matches("select, input[type='checkbox']")) validateField(event.target);
 });
-form.addEventListener("submit", (event) => {
+form?.addEventListener("submit", (event) => {
   event.preventDefault();
   const fields = [...form.querySelectorAll("input, select, textarea")];
   const isValid = fields.map(validateField).every(Boolean);
