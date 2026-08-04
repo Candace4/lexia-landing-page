@@ -124,20 +124,20 @@
 .solution-grid{border-top-color:rgba(0,21,47,.14);border-bottom-color:rgba(0,21,47,.14)}
 .solution-item{padding:20px 14px 18px}
 .solution-item+.solution-item{border-left-color:rgba(0,21,47,.11)}
-.solution-item svg{width:28px;height:28px;margin-bottom:10px;stroke:var(--gold-500);stroke-width:1.55}
+.solution-item svg{width:34px;height:34px;margin-bottom:10px;stroke:var(--gold-500);stroke-width:1.65}
 .solution-item h3{font-size:13px;line-height:1.35}
-.enquiry{background:var(--white);border-top:1px solid rgba(0,21,47,.1)}
+.enquiry{padding-block:clamp(56px,5vw,66px) clamp(80px,6.5vw,94px);background:var(--white);border-top:1px solid rgba(0,21,47,.1)}
 .floating-field input:-webkit-autofill,.floating-field input:-webkit-autofill:hover,.floating-field input:-webkit-autofill:focus{-webkit-text-fill-color:var(--navy-950);box-shadow:0 0 0 1000px var(--white) inset;caret-color:var(--navy-950)}
 .floating-field input:autofill{background:var(--white)}
 .submit-button.button-on-light{color:var(--white);background:var(--navy-950);border-color:var(--gold-500)}
 .submit-button.button-on-light:hover,.submit-button.button-on-light:focus-visible{color:var(--white);background:var(--navy-700);border-color:var(--gold-300)}
-@media(max-width:1080px){.solutions{padding-block:32px 36px}.solution-grid{grid-template-columns:repeat(3,1fr)}.solution-item:nth-child(4){border-left:0}.solution-item:nth-child(n+4){border-top:1px solid rgba(0,21,47,.11)}}
-@media(max-width:800px){.solutions{padding-block:30px 34px}.solutions-label{margin-bottom:16px}.solution-grid{grid-template-columns:1fr 1fr}.solution-item{padding:18px 10px 16px}.solution-item:nth-child(4){border-left:1px solid rgba(0,21,47,.11)}.solution-item:nth-child(odd){border-left:0}.solution-item:nth-child(n+3){border-top:1px solid rgba(0,21,47,.11)}}
-@media(max-width:520px){.solutions{padding-block:28px 30px}.solutions-label{font-size:11px}.solution-item{padding:16px 8px 14px}.solution-item svg{width:26px;height:26px;margin-bottom:8px}.solution-item h3{font-size:13px}.enquiry{padding-block:60px}}
+@media(max-width:1080px){.solutions{padding-block:32px 36px}.enquiry{padding-block:64px 82px}.solution-grid{grid-template-columns:repeat(3,1fr)}.solution-item:nth-child(4){border-left:0}.solution-item:nth-child(n+4){border-top:1px solid rgba(0,21,47,.11)}}
+@media(max-width:800px){.solutions{padding-block:30px 34px}.enquiry{padding-block:62px 78px}.solutions-label{margin-bottom:16px}.solution-grid{grid-template-columns:1fr 1fr}.solution-item{padding:18px 10px 16px}.solution-item:nth-child(4){border-left:1px solid rgba(0,21,47,.11)}.solution-item:nth-child(odd){border-left:0}.solution-item:nth-child(n+3){border-top:1px solid rgba(0,21,47,.11)}}
+@media(max-width:520px){.solutions{padding-block:28px 30px}.solutions-label{font-size:11px}.solution-item{padding:16px 8px 14px}.solution-item svg{width:28px;height:28px;margin-bottom:8px}.solution-item h3{font-size:13px}.enquiry{padding-block:50px 60px}}
 @media(max-width:339px){.solution-grid{grid-template-columns:1fr}.solution-item+.solution-item{border-left:0}.solution-item:nth-child(n+2){border-top:1px solid rgba(0,21,47,.11)}}
 
 /* Final Lexia landing-page refinements */
 .solution-item svg{stroke:var(--navy-950)}
-.solution-item svg .gold-accent{stroke:var(--gold-500)}
+.solution-item svg .gold-accent{stroke:#bf7d2a;stroke-width:1.85}
 .enquiry-intro h2::after{content:"";display:block;width:48px;height:2px;margin-top:20px;background:var(--gold-500)}
 @media(max-width:520px){.enquiry-intro h2::after{width:42px;margin-top:16px}}
