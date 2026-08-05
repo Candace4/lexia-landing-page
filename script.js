@@ -68,7 +68,7 @@ form?.addEventListener("submit", (event) => {
     fields.find((field) => !field.checkValidity()).focus();
     return;
   }
-  // Preview only: preserve the entered values until an approved secure endpoint is configured.
-  formStatus.textContent = "This preview cannot send enquiries yet. Form connection is pending stakeholder confirmation.";
-  formStatus.focus();
+  // Preview only: show the approved confirmation message until a secure endpoint is configured.
+  form.innerHTML = `<div class="submission-message" tabindex="-1"><h2>Thank you. Your enquiry has been received.</h2><p>A Lexia Finance Group representative will be in touch regarding your enquiry.</p></div>`;
+  form.querySelector(".submission-message").focus();
 });
