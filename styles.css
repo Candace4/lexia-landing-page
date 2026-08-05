@@ -371,7 +371,7 @@
 @media(max-width:767px){
   .property-feature-copy{
     max-width:none;
-    padding-inline:var(--page-gutter);
+    padding:32px var(--page-gutter) 24px;
   }
 
   .property-feature-image{
