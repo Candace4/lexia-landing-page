@@ -366,3 +366,48 @@
   .who-help-hero-inner{padding:44px var(--page-gutter) 48px 0}
   .who-help-hero p:last-child{color:rgba(255,255,255,.86)}
 }
+
+/* Targeted mobile refinements for Who We Help and Privacy Policy pages */
+@media(max-width:767px){
+  .property-feature-copy{
+    max-width:none;
+    padding-inline:var(--page-gutter);
+  }
+
+  .property-feature-image{
+    width:100vw;
+    margin-inline:calc(50% - 50vw);
+  }
+
+  .policy-layout{
+    gap:24px;
+    padding-block:42px 58px;
+  }
+
+  .policy-toc{
+    padding:18px 0 6px;
+    border-top:1px solid rgba(0,21,47,.12);
+    border-bottom:1px solid rgba(0,21,47,.12);
+  }
+
+  .policy-toc a{
+    padding:10px 0;
+    font-size:14px;
+  }
+
+  .policy-content,
+  .policy-content section,
+  .policy-content p,
+  .policy-content dd,
+  .policy-content .placeholder{
+    overflow-wrap:anywhere;
+  }
+
+  .policy-content section{
+    padding-block:22px;
+  }
+
+  .policy-content h2{
+    font-size:20px;
+  }
+}
