@@ -253,3 +253,22 @@
 @media(max-width:1100px){.process-step{grid-template-columns:64px minmax(0,1fr)}.process-step p{grid-column:2}.audience-three{grid-template-columns:repeat(2,minmax(0,1fr))}.audience-three article:nth-child(3){grid-column:1/-1;border-top:1px solid rgba(0,21,47,.13);border-left:0;padding-left:0}}
 @media(max-width:900px){.process-layout,.expect-layout,.audience-intro,.audience-business,.editorial-cta.action-cta .page-width{grid-template-columns:1fr}.process-intro{grid-column:1;position:static;max-width:650px}.process-steps{grid-column:1}.values-structured .values-editorial{grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid rgba(0,21,47,.12)}.values-structured .values-editorial article{padding-block:24px}.values-structured .values-editorial article:nth-child(3){grid-column:1/-1;border-top:1px solid rgba(0,21,47,.13);border-left:0;padding-left:0}.editorial-cta.action-cta .button{justify-self:start}.audience-business article{max-width:760px}}
 @media(max-width:640px){.process-structure{padding-block:44px}.process-step{grid-template-columns:46px minmax(0,1fr);gap:16px;padding-block:26px}.process-step svg,.audience-item-grid svg,.audience-business svg{width:38px;height:38px}.process-step p{grid-column:1/-1}.values-structured .values-editorial,.audience-two,.audience-three{grid-template-columns:1fr}.values-structured .values-editorial article,.values-structured .values-editorial article:first-child,.audience-item-grid article,.audience-item-grid article:first-child{padding:24px 0;border-left:0;border-top:1px solid rgba(0,21,47,.13)}.values-structured .values-editorial article:first-child,.audience-item-grid article:first-child{border-top:0}.audience-item-grid{border-bottom:0}.audience-intro{padding-block:38px}.audience-section{padding-block:38px}.audience-business article{grid-template-columns:1fr;gap:16px}.editorial-cta.action-cta .button{width:100%}}
+
+/* Internal page design-system refinement: wider text-led heroes and cohesive enquiry CTAs */
+.internal-hero{padding-block:clamp(72px,6.4vw,92px) clamp(68px,5.8vw,86px)}
+.internal-hero .page-width{max-width:1280px}
+.internal-hero h1{max-width:860px;font-size:clamp(44px,4.35vw,62px);line-height:1.08}
+.internal-hero p:last-child{max-width:700px;margin-top:0;font-size:clamp(17px,1.35vw,19px);line-height:1.68}
+.approach-hero{padding-block:clamp(72px,6.4vw,92px) clamp(68px,5.8vw,86px)}
+.approach-hero p:last-child{max-width:700px}
+.editorial-cta,.editorial-cta.action-cta{padding-block:clamp(50px,4.8vw,68px);background:var(--white);border-top:1px solid rgba(215,163,90,.68);border-bottom:1px solid rgba(0,21,47,.1)}
+.editorial-cta .page-width,.editorial-cta.action-cta .page-width{max-width:1280px;display:block}
+.editorial-cta .page-width>div,.editorial-cta.action-cta .page-width{max-width:720px}
+.editorial-cta h2,.editorial-cta.action-cta h2{max-width:700px;margin:0;color:var(--navy-950);font:500 clamp(30px,2.8vw,40px)/1.16 var(--display);letter-spacing:-.02em}
+.editorial-cta p:not(.eyebrow),.editorial-cta.action-cta p{max-width:650px;margin:14px 0 0;color:var(--muted);font-size:17px;line-height:1.65}
+.editorial-cta .button,.editorial-cta.action-cta .button{margin-top:26px;justify-self:start}
+.audience-business{grid-template-columns:minmax(340px,38%) minmax(0,1fr)}
+.audience-business article{grid-template-columns:48px minmax(0,620px);gap:24px;padding-top:0}
+@media(max-width:900px){.internal-hero{padding-block:62px}.internal-hero h1{max-width:780px}.internal-hero p:last-child{max-width:680px}.editorial-cta .page-width>div,.editorial-cta.action-cta .page-width{max-width:680px}.audience-business{grid-template-columns:1fr}}
+@media(max-width:520px){.internal-hero,.approach-hero{padding-block:48px 52px}.internal-hero h1{font-size:clamp(40px,10vw,48px)}.internal-hero p:last-child{font-size:16px}.editorial-cta,.editorial-cta.action-cta{padding-block:46px 52px}.editorial-cta .button,.editorial-cta.action-cta .button{width:100%;margin-top:22px}.audience-business article{grid-template-columns:1fr;gap:16px}}
+.editorial-cta .page-width,.editorial-cta.action-cta .page-width{display:flex;flex-direction:column;align-items:flex-start}
