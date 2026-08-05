@@ -411,3 +411,159 @@
     font-size:20px;
   }
 }
+
+/* Final Privacy Policy mobile layout fix: placed last to override later desktop policy rules. */
+@media(max-width:767px){
+  .internal-hero{
+    padding:50px 0 54px;
+  }
+
+  .internal-hero .page-width{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    padding-inline:20px;
+  }
+
+  .internal-hero h1{
+    max-width:none;
+    font-size:clamp(38px,10.5vw,42px);
+    line-height:1.08;
+  }
+
+  .internal-hero p:last-child{
+    max-width:none;
+    font-size:16px;
+    line-height:1.68;
+  }
+
+  .policy-layout.page-width{
+    display:block;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    padding:42px 20px 58px;
+  }
+
+  .policy-layout.page-width > .policy-toc,
+  .policy-layout.page-width > .policy-content{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+
+  .policy-layout.page-width > .policy-toc{
+    position:static;
+    top:auto;
+    display:block;
+    padding:18px 0 8px;
+    margin:0 0 24px;
+    border-top:1px solid rgba(0,21,47,.12);
+    border-bottom:1px solid rgba(0,21,47,.12);
+  }
+
+  .policy-layout.page-width > .policy-toc a{
+    display:block;
+    min-height:44px;
+    padding:12px 0;
+    font-size:14px;
+    line-height:1.4;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+
+  .policy-layout.page-width > .policy-content{
+    padding:0;
+    margin:0;
+    color:var(--ink);
+    font-size:16px;
+    line-height:1.7;
+    text-align:left;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+
+  .policy-content section{
+    min-width:0;
+    padding-block:22px;
+  }
+
+  .policy-content h2{
+    font-size:26px;
+    line-height:1.22;
+  }
+
+  .policy-content h3{
+    font-size:19px;
+    line-height:1.32;
+  }
+
+  .policy-content p,
+  .policy-content li,
+  .policy-content dd,
+  .policy-content .placeholder,
+  .policy-closing{
+    max-width:100%;
+    font-size:16px;
+    line-height:1.7;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+
+  .policy-content dl{
+    display:block;
+  }
+
+  .policy-content dt{
+    margin-top:18px;
+  }
+
+  .policy-content dd{
+    margin:4px 0 0;
+    min-width:0;
+  }
+
+  .site-footer .footer-inner.page-width{
+    display:block;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    padding-inline:20px;
+  }
+
+  .footer-brand{
+    display:block;
+  }
+
+  .footer-brand p{
+    max-width:100%;
+    margin-top:20px;
+    text-align:left;
+    overflow-wrap:anywhere;
+  }
+
+  .footer-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px 28px;
+    width:100%;
+  }
+
+  .footer-lower{
+    display:block;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+
+  .footer-legal,
+  .footer-copyright{
+    max-width:100%;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+
+  .footer-copyright{
+    margin-top:18px;
+  }
+}
